@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     _reserved0: [u8; 220usize],
@@ -96,8 +96,7 @@ pub struct RegisterBlock {
     #[doc = "0x2c0 - USB System Error Interrupt Set"]
     pub syserrintset: SYSERRINTSET,
     _reserved44: [u8; 60usize],
-    #[doc = "I2C Transmit I2C Receive"]
-    pub i2c: I2C_UNION,
+    _reserved_44_i2c: [u8; 4usize],
     #[doc = "0x304 - I2C Status"]
     pub i2c_sts: I2C_STS,
     #[doc = "0x308 - I2C Control"]
@@ -107,356 +106,392 @@ pub struct RegisterBlock {
     #[doc = "0x310 - I2C Clock Low"]
     pub i2c_clklo: I2C_CLKLO,
     _reserved49: [u8; 3296usize],
-    #[doc = "OTG clock controller USB Clock Control"]
-    pub otgclkctrl: OTGCLKCTRL_UNION,
-    #[doc = "OTG clock status USB Clock Status"]
-    pub otgclkst: OTGCLKST_UNION,
+    _reserved_49_otgclkctrl: [u8; 4usize],
+    _reserved_50_otgclkst: [u8; 4usize],
 }
-#[doc = "I2C Transmit I2C Receive"]
-#[repr(C)]
-pub union I2C_UNION {
+impl RegisterBlock {
     #[doc = "0x300 - I2C Transmit"]
-    pub i2c_wo: I2C_WO,
+    #[inline(always)]
+    pub fn i2c_wo(&self) -> &I2C_WO {
+        unsafe { &*(((self as *const Self) as *const u8).add(768usize) as *const I2C_WO) }
+    }
+    #[doc = "0x300 - I2C Transmit"]
+    #[inline(always)]
+    pub fn i2c_wo_mut(&self) -> &mut I2C_WO {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(768usize) as *mut I2C_WO) }
+    }
     #[doc = "0x300 - I2C Receive"]
-    pub i2c_rx: I2C_RX,
-}
-#[doc = "OTG clock controller USB Clock Control"]
-#[repr(C)]
-pub union OTGCLKCTRL_UNION {
+    #[inline(always)]
+    pub fn i2c_rx(&self) -> &I2C_RX {
+        unsafe { &*(((self as *const Self) as *const u8).add(768usize) as *const I2C_RX) }
+    }
+    #[doc = "0x300 - I2C Receive"]
+    #[inline(always)]
+    pub fn i2c_rx_mut(&self) -> &mut I2C_RX {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(768usize) as *mut I2C_RX) }
+    }
     #[doc = "0xff4 - OTG clock controller"]
-    pub otgclkctrl: OTGCLKCTRL,
+    #[inline(always)]
+    pub fn otgclkctrl(&self) -> &OTGCLKCTRL {
+        unsafe { &*(((self as *const Self) as *const u8).add(4084usize) as *const OTGCLKCTRL) }
+    }
+    #[doc = "0xff4 - OTG clock controller"]
+    #[inline(always)]
+    pub fn otgclkctrl_mut(&self) -> &mut OTGCLKCTRL {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(4084usize) as *mut OTGCLKCTRL) }
+    }
     #[doc = "0xff4 - USB Clock Control"]
-    pub usbclkctrl: USBCLKCTRL,
-}
-#[doc = "OTG clock status USB Clock Status"]
-#[repr(C)]
-pub union OTGCLKST_UNION {
+    #[inline(always)]
+    pub fn usbclkctrl(&self) -> &USBCLKCTRL {
+        unsafe { &*(((self as *const Self) as *const u8).add(4084usize) as *const USBCLKCTRL) }
+    }
+    #[doc = "0xff4 - USB Clock Control"]
+    #[inline(always)]
+    pub fn usbclkctrl_mut(&self) -> &mut USBCLKCTRL {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(4084usize) as *mut USBCLKCTRL) }
+    }
     #[doc = "0xff8 - OTG clock status"]
-    pub otgclkst: OTGCLKST,
+    #[inline(always)]
+    pub fn otgclkst(&self) -> &OTGCLKST {
+        unsafe { &*(((self as *const Self) as *const u8).add(4088usize) as *const OTGCLKST) }
+    }
+    #[doc = "0xff8 - OTG clock status"]
+    #[inline(always)]
+    pub fn otgclkst_mut(&self) -> &mut OTGCLKST {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(4088usize) as *mut OTGCLKST) }
+    }
     #[doc = "0xff8 - USB Clock Status"]
-    pub usbclkst: USBCLKST,
+    #[inline(always)]
+    pub fn usbclkst(&self) -> &USBCLKST {
+        unsafe { &*(((self as *const Self) as *const u8).add(4088usize) as *const USBCLKST) }
+    }
+    #[doc = "0xff8 - USB Clock Status"]
+    #[inline(always)]
+    pub fn usbclkst_mut(&self) -> &mut USBCLKST {
+        unsafe { &mut *(((self as *const Self) as *mut u8).add(4088usize) as *mut USBCLKST) }
+    }
 }
 #[doc = "OTG Interrupt Status"]
 pub struct INTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Interrupt Status"]
 pub mod intst;
 #[doc = "OTG Interrupt Enable"]
 pub struct INTEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Interrupt Enable"]
 pub mod inten;
 #[doc = "OTG Interrupt Set"]
 pub struct INTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Interrupt Set"]
 pub mod intset;
 #[doc = "OTG Interrupt Clear"]
 pub struct INTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Interrupt Clear"]
 pub mod intclr;
 #[doc = "OTG Status and Control and USB port select"]
 pub struct STCTRL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Status and Control and USB port select"]
 pub mod stctrl;
 #[doc = "OTG Timer"]
 pub struct TMR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG Timer"]
 pub mod tmr;
 #[doc = "USB Device Interrupt Status"]
 pub struct DEVINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Device Interrupt Status"]
 pub mod devintst;
 #[doc = "USB Device Interrupt Enable"]
 pub struct DEVINTEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Device Interrupt Enable"]
 pub mod devinten;
 #[doc = "USB Device Interrupt Clear"]
 pub struct DEVINTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Device Interrupt Clear"]
 pub mod devintclr;
 #[doc = "USB Device Interrupt Set"]
 pub struct DEVINTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Device Interrupt Set"]
 pub mod devintset;
 #[doc = "USB Command Code"]
 pub struct CMDCODE {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Command Code"]
 pub mod cmdcode;
 #[doc = "USB Command Data"]
 pub struct CMDDATA {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Command Data"]
 pub mod cmddata;
 #[doc = "USB Receive Data"]
 pub struct RXDATA {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Receive Data"]
 pub mod rxdata;
 #[doc = "USB Transmit Data"]
 pub struct TXDATA {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Transmit Data"]
 pub mod txdata;
 #[doc = "USB Receive Packet Length"]
 pub struct RXPLEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Receive Packet Length"]
 pub mod rxplen;
 #[doc = "USB Transmit Packet Length"]
 pub struct TXPLEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Transmit Packet Length"]
 pub mod txplen;
 #[doc = "USB Control"]
 pub struct CTRL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Control"]
 pub mod ctrl;
 #[doc = "USB Device Interrupt Priority"]
 pub struct DEVINTPRI {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Device Interrupt Priority"]
 pub mod devintpri;
 #[doc = "USB Endpoint Interrupt Status"]
 pub struct EPINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Interrupt Status"]
 pub mod epintst;
 #[doc = "USB Endpoint Interrupt Enable"]
 pub struct EPINTEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Interrupt Enable"]
 pub mod epinten;
 #[doc = "USB Endpoint Interrupt Clear"]
 pub struct EPINTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Interrupt Clear"]
 pub mod epintclr;
 #[doc = "USB Endpoint Interrupt Set"]
 pub struct EPINTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Interrupt Set"]
 pub mod epintset;
 #[doc = "USB Endpoint Priority"]
 pub struct EPINTPRI {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Priority"]
 pub mod epintpri;
 #[doc = "USB Realize Endpoint"]
 pub struct REEP {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Realize Endpoint"]
 pub mod reep;
 #[doc = "USB Endpoint Index"]
 pub struct EPIND {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint Index"]
 pub mod epind;
 #[doc = "USB MaxPacketSize"]
 pub struct MAXPSIZE {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB MaxPacketSize"]
 pub mod maxpsize;
 #[doc = "USB DMA Request Status"]
 pub struct DMARST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB DMA Request Status"]
 pub mod dmarst;
 #[doc = "USB DMA Request Clear"]
 pub struct DMARCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB DMA Request Clear"]
 pub mod dmarclr;
 #[doc = "USB DMA Request Set"]
 pub struct DMARSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB DMA Request Set"]
 pub mod dmarset;
 #[doc = "USB UDCA Head"]
 pub struct UDCAH {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB UDCA Head"]
 pub mod udcah;
 #[doc = "USB Endpoint DMA Status"]
 pub struct EPDMAST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint DMA Status"]
 pub mod epdmast;
 #[doc = "USB Endpoint DMA Enable"]
 pub struct EPDMAEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint DMA Enable"]
 pub mod epdmaen;
 #[doc = "USB Endpoint DMA Disable"]
 pub struct EPDMADIS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Endpoint DMA Disable"]
 pub mod epdmadis;
 #[doc = "USB DMA Interrupt Status"]
 pub struct DMAINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB DMA Interrupt Status"]
 pub mod dmaintst;
 #[doc = "USB DMA Interrupt Enable"]
 pub struct DMAINTEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB DMA Interrupt Enable"]
 pub mod dmainten;
 #[doc = "USB End of Transfer Interrupt Status"]
 pub struct EOTINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB End of Transfer Interrupt Status"]
 pub mod eotintst;
 #[doc = "USB End of Transfer Interrupt Clear"]
 pub struct EOTINTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB End of Transfer Interrupt Clear"]
 pub mod eotintclr;
 #[doc = "USB End of Transfer Interrupt Set"]
 pub struct EOTINTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB End of Transfer Interrupt Set"]
 pub mod eotintset;
 #[doc = "USB New DD Request Interrupt Status"]
 pub struct NDDRINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB New DD Request Interrupt Status"]
 pub mod nddrintst;
 #[doc = "USB New DD Request Interrupt Clear"]
 pub struct NDDRINTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB New DD Request Interrupt Clear"]
 pub mod nddrintclr;
 #[doc = "USB New DD Request Interrupt Set"]
 pub struct NDDRINTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB New DD Request Interrupt Set"]
 pub mod nddrintset;
 #[doc = "USB System Error Interrupt Status"]
 pub struct SYSERRINTST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB System Error Interrupt Status"]
 pub mod syserrintst;
 #[doc = "USB System Error Interrupt Clear"]
 pub struct SYSERRINTCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB System Error Interrupt Clear"]
 pub mod syserrintclr;
 #[doc = "USB System Error Interrupt Set"]
 pub struct SYSERRINTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB System Error Interrupt Set"]
 pub mod syserrintset;
 #[doc = "I2C Receive"]
 pub struct I2C_RX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Receive"]
 pub mod i2c_rx;
 #[doc = "I2C Transmit"]
 pub struct I2C_WO {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Transmit"]
 pub mod i2c_wo;
 #[doc = "I2C Status"]
 pub struct I2C_STS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Status"]
 pub mod i2c_sts;
 #[doc = "I2C Control"]
 pub struct I2C_CTL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Control"]
 pub mod i2c_ctl;
 #[doc = "I2C Clock High"]
 pub struct I2C_CLKHI {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Clock High"]
 pub mod i2c_clkhi;
 #[doc = "I2C Clock Low"]
 pub struct I2C_CLKLO {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Clock Low"]
 pub mod i2c_clklo;
 #[doc = "USB Clock Control"]
 pub struct USBCLKCTRL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Clock Control"]
 pub mod usbclkctrl;
 #[doc = "OTG clock controller"]
 pub struct OTGCLKCTRL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG clock controller"]
 pub mod otgclkctrl;
 #[doc = "USB Clock Status"]
 pub struct USBCLKST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "USB Clock Status"]
 pub mod usbclkst;
 #[doc = "OTG clock status"]
 pub struct OTGCLKST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "OTG clock status"]
 pub mod otgclkst;

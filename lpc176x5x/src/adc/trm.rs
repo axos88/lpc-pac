@@ -1,145 +1,111 @@
-#[doc = r" Value read from the register"]
+#[doc = r"Value read from the register"]
 pub struct R {
     bits: u32,
 }
-#[doc = r" Value to write to the register"]
+#[doc = r"Value to write to the register"]
 pub struct W {
     bits: u32,
 }
 impl super::TRM {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
+    #[doc = r"Modifies the contents of the register"]
+    #[inline(always)]
     pub fn modify<F>(&self, f: F)
     where
         for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
     {
         let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
+        self.register.set(f(&R { bits }, &mut W { bits }).bits);
     }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
+    #[doc = r"Reads the contents of the register"]
+    #[inline(always)]
     pub fn read(&self) -> R {
         R {
             bits: self.register.get(),
         }
     }
-    #[doc = r" Writes to the register"]
-    #[inline]
+    #[doc = r"Writes to the register"]
+    #[inline(always)]
     pub fn write<F>(&self, f: F)
     where
         F: FnOnce(&mut W) -> &mut W,
     {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
+        self.register.set(
+            f(&mut W {
+                bits: Self::reset_value(),
+            })
+            .bits,
+        );
     }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
+    #[doc = r"Reset value of the register"]
+    #[inline(always)]
+    pub const fn reset_value() -> u32 {
+        0
+    }
+    #[doc = r"Writes the reset value to the register"]
+    #[inline(always)]
     pub fn reset(&self) {
-        self.write(|w| w)
+        self.register.set(Self::reset_value())
     }
 }
-#[doc = r" Value of the field"]
-pub struct ADCOFFSR {
-    bits: u8,
-}
-impl ADCOFFSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TRIMR {
-    bits: u8,
-}
-impl TRIMR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
+#[doc = r"Reader of the field"]
+pub type ADCOFFS_R = crate::FR<u8, u8>;
+#[doc = r"Proxy"]
 pub struct _ADCOFFSW<'a> {
     w: &'a mut W,
 }
 impl<'a> _ADCOFFSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
+#[doc = r"Reader of the field"]
+pub type TRIM_R = crate::FR<u8, u8>;
+#[doc = r"Proxy"]
 pub struct _TRIMW<'a> {
     w: &'a mut W,
 }
 impl<'a> _TRIMW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
+    #[doc = r"Value of the register as raw bits"]
+    #[inline(always)]
     pub fn bits(&self) -> u32 {
         self.bits
     }
     #[doc = "Bits 4:7 - Offset trim bits for ADC operation. Initialized by the boot code. Can be overwritten by the user."]
-    #[inline]
-    pub fn adcoffs(&self) -> ADCOFFSR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ADCOFFSR { bits }
+    #[inline(always)]
+    pub fn adcoffs(&self) -> ADCOFFS_R {
+        ADCOFFS_R::new(((self.bits() >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 8:11 - written-to by boot code. Can not be overwritten by the user. These bits are locked after boot code write."]
-    #[inline]
-    pub fn trim(&self) -> TRIMR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TRIMR { bits }
+    #[inline(always)]
+    pub fn trim(&self) -> TRIM_R {
+        TRIM_R::new(((self.bits() >> 8) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
+    #[doc = r"Writes raw bits to the register"]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
     }
     #[doc = "Bits 4:7 - Offset trim bits for ADC operation. Initialized by the boot code. Can be overwritten by the user."]
-    #[inline]
+    #[inline(always)]
     pub fn adcoffs(&mut self) -> _ADCOFFSW {
         _ADCOFFSW { w: self }
     }
     #[doc = "Bits 8:11 - written-to by boot code. Can not be overwritten by the user. These bits are locked after boot code write."]
-    #[inline]
+    #[inline(always)]
     pub fn trim(&mut self) -> _TRIMW {
         _TRIMW { w: self }
     }

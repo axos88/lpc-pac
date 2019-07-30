@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - MAC configuration register 1."]
@@ -100,265 +100,265 @@ pub struct RegisterBlock {
 }
 #[doc = "MAC configuration register 1."]
 pub struct MAC1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MAC configuration register 1."]
 pub mod mac1;
 #[doc = "MAC configuration register 2."]
 pub struct MAC2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MAC configuration register 2."]
 pub mod mac2;
 #[doc = "Back-to-Back Inter-Packet-Gap register."]
 pub struct IPGT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Back-to-Back Inter-Packet-Gap register."]
 pub mod ipgt;
 #[doc = "Non Back-to-Back Inter-Packet-Gap register."]
 pub struct IPGR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Non Back-to-Back Inter-Packet-Gap register."]
 pub mod ipgr;
 #[doc = "Collision window / Retry register."]
 pub struct CLRT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Collision window / Retry register."]
 pub mod clrt;
 #[doc = "Maximum Frame register."]
 pub struct MAXF {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Maximum Frame register."]
 pub mod maxf;
 #[doc = "PHY Support register."]
 pub struct SUPP {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "PHY Support register."]
 pub mod supp;
 #[doc = "Test register."]
 pub struct TEST {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Test register."]
 pub mod test;
 #[doc = "MII Mgmt Configuration register."]
 pub struct MCFG {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Configuration register."]
 pub mod mcfg;
 #[doc = "MII Mgmt Command register."]
 pub struct MCMD {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Command register."]
 pub mod mcmd;
 #[doc = "MII Mgmt Address register."]
 pub struct MADR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Address register."]
 pub mod madr;
 #[doc = "MII Mgmt Write Data register."]
 pub struct MWTD {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Write Data register."]
 pub mod mwtd;
 #[doc = "MII Mgmt Read Data register."]
 pub struct MRDD {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Read Data register."]
 pub mod mrdd;
 #[doc = "MII Mgmt Indicators register."]
 pub struct MIND {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "MII Mgmt Indicators register."]
 pub mod mind;
 #[doc = "Station Address 0 register."]
 pub struct SA0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Station Address 0 register."]
 pub mod sa0;
 #[doc = "Station Address 1 register."]
 pub struct SA1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Station Address 1 register."]
 pub mod sa1;
 #[doc = "Station Address 2 register."]
 pub struct SA2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Station Address 2 register."]
 pub mod sa2;
 #[doc = "Command register."]
 pub struct COMMAND {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Command register."]
 pub mod command;
 #[doc = "Status register."]
 pub struct STATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Status register."]
 pub mod status;
 #[doc = "Receive descriptor base address register."]
 pub struct RXDESCRIPTOR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive descriptor base address register."]
 pub mod rxdescriptor;
 #[doc = "Receive status base address register."]
 pub struct RXSTATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive status base address register."]
 pub mod rxstatus;
 #[doc = "Receive number of descriptors register."]
 pub struct RXDESCRIPTORNUMBER {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive number of descriptors register."]
 pub mod rxdescriptornumber;
 #[doc = "Receive produce index register."]
 pub struct RXPRODUCEINDEX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive produce index register."]
 pub mod rxproduceindex;
 #[doc = "Receive consume index register."]
 pub struct RXCONSUMEINDEX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive consume index register."]
 pub mod rxconsumeindex;
 #[doc = "Transmit descriptor base address register."]
 pub struct TXDESCRIPTOR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit descriptor base address register."]
 pub mod txdescriptor;
 #[doc = "Transmit status base address register."]
 pub struct TXSTATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit status base address register."]
 pub mod txstatus;
 #[doc = "Transmit number of descriptors register."]
 pub struct TXDESCRIPTORNUMBER {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit number of descriptors register."]
 pub mod txdescriptornumber;
 #[doc = "Transmit produce index register."]
 pub struct TXPRODUCEINDEX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit produce index register."]
 pub mod txproduceindex;
 #[doc = "Transmit consume index register."]
 pub struct TXCONSUMEINDEX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit consume index register."]
 pub mod txconsumeindex;
 #[doc = "Transmit status vector 0 register."]
 pub struct TSV0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit status vector 0 register."]
 pub mod tsv0;
 #[doc = "Transmit status vector 1 register."]
 pub struct TSV1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Transmit status vector 1 register."]
 pub mod tsv1;
 #[doc = "Receive status vector register."]
 pub struct RSV {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive status vector register."]
 pub mod rsv;
 #[doc = "Flow control counter register."]
 pub struct FLOWCONTROLCOUNTER {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Flow control counter register."]
 pub mod flowcontrolcounter;
 #[doc = "Flow control status register."]
 pub struct FLOWCONTROLSTATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Flow control status register."]
 pub mod flowcontrolstatus;
 #[doc = "Receive filter control register."]
 pub struct RXFILTERCTRL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive filter control register."]
 pub mod rxfilterctrl;
 #[doc = "Receive filter WoL status register."]
 pub struct RXFILTERWOLSTATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive filter WoL status register."]
 pub mod rxfilterwolstatus;
 #[doc = "Receive filter WoL clear register."]
 pub struct RXFILTERWOLCLEAR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Receive filter WoL clear register."]
 pub mod rxfilterwolclear;
 #[doc = "Hash filter table LSBs register."]
 pub struct HASHFILTERL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Hash filter table LSBs register."]
 pub mod hashfilterl;
 #[doc = "Hash filter table MSBs register."]
 pub struct HASHFILTERH {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Hash filter table MSBs register."]
 pub mod hashfilterh;
 #[doc = "Interrupt status register."]
 pub struct INTSTATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt status register."]
 pub mod intstatus;
 #[doc = "Interrupt enable register."]
 pub struct INTENABLE {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt enable register."]
 pub mod intenable;
 #[doc = "Interrupt clear register."]
 pub struct INTCLEAR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt clear register."]
 pub mod intclear;
 #[doc = "Interrupt set register."]
 pub struct INTSET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt set register."]
 pub mod intset;
 #[doc = "Power-down register."]
 pub struct POWERDOWN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Power-down register."]
 pub mod powerdown;

@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - DMA Interrupt Status Register"]
@@ -39,7 +39,7 @@ pub struct RegisterBlock {
     #[doc = "0x10c - DMA Channel 0 Control Register"]
     pub control0: CONTROL,
     #[doc = "0x110 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config0: CONFIG,
+    pub config_0: CONFIG_,
     _reserved19: [u8; 12usize],
     #[doc = "0x120 - DMA Channel 0 Source Address Register"]
     pub srcaddr1: SRCADDR,
@@ -50,7 +50,7 @@ pub struct RegisterBlock {
     #[doc = "0x12c - DMA Channel 0 Control Register"]
     pub control1: CONTROL,
     #[doc = "0x130 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config1: CONFIG,
+    pub config_1: CONFIG_,
     _reserved24: [u8; 12usize],
     #[doc = "0x140 - DMA Channel 0 Source Address Register"]
     pub srcaddr2: SRCADDR,
@@ -61,7 +61,7 @@ pub struct RegisterBlock {
     #[doc = "0x14c - DMA Channel 0 Control Register"]
     pub control2: CONTROL,
     #[doc = "0x150 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config2: CONFIG,
+    pub config_2: CONFIG_,
     _reserved29: [u8; 12usize],
     #[doc = "0x160 - DMA Channel 0 Source Address Register"]
     pub srcaddr3: SRCADDR,
@@ -72,7 +72,7 @@ pub struct RegisterBlock {
     #[doc = "0x16c - DMA Channel 0 Control Register"]
     pub control3: CONTROL,
     #[doc = "0x170 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config3: CONFIG,
+    pub config_3: CONFIG_,
     _reserved34: [u8; 12usize],
     #[doc = "0x180 - DMA Channel 0 Source Address Register"]
     pub srcaddr4: SRCADDR,
@@ -83,7 +83,7 @@ pub struct RegisterBlock {
     #[doc = "0x18c - DMA Channel 0 Control Register"]
     pub control4: CONTROL,
     #[doc = "0x190 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config4: CONFIG,
+    pub config_4: CONFIG_,
     _reserved39: [u8; 12usize],
     #[doc = "0x1a0 - DMA Channel 0 Source Address Register"]
     pub srcaddr5: SRCADDR,
@@ -94,7 +94,7 @@ pub struct RegisterBlock {
     #[doc = "0x1ac - DMA Channel 0 Control Register"]
     pub control5: CONTROL,
     #[doc = "0x1b0 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config5: CONFIG,
+    pub config_5: CONFIG_,
     _reserved44: [u8; 12usize],
     #[doc = "0x1c0 - DMA Channel 0 Source Address Register"]
     pub srcaddr6: SRCADDR,
@@ -105,7 +105,7 @@ pub struct RegisterBlock {
     #[doc = "0x1cc - DMA Channel 0 Control Register"]
     pub control6: CONTROL,
     #[doc = "0x1d0 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config6: CONFIG,
+    pub config_6: CONFIG_,
     _reserved49: [u8; 12usize],
     #[doc = "0x1e0 - DMA Channel 0 Source Address Register"]
     pub srcaddr7: SRCADDR,
@@ -116,119 +116,119 @@ pub struct RegisterBlock {
     #[doc = "0x1ec - DMA Channel 0 Control Register"]
     pub control7: CONTROL,
     #[doc = "0x1f0 - DMA Channel 0 Configuration Register\\[1\\]"]
-    pub config7: CONFIG,
+    pub config_7: CONFIG_,
 }
 #[doc = "DMA Interrupt Status Register"]
 pub struct INTSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Interrupt Status Register"]
 pub mod intstat;
 #[doc = "DMA Interrupt Terminal Count Request Status Register"]
 pub struct INTTCSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Interrupt Terminal Count Request Status Register"]
 pub mod inttcstat;
 #[doc = "DMA Interrupt Terminal Count Request Clear Register"]
 pub struct INTTCCLEAR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Interrupt Terminal Count Request Clear Register"]
 pub mod inttcclear;
 #[doc = "DMA Interrupt Error Status Register"]
 pub struct INTERRSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Interrupt Error Status Register"]
 pub mod interrstat;
 #[doc = "DMA Interrupt Error Clear Register"]
 pub struct INTERRCLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Interrupt Error Clear Register"]
 pub mod interrclr;
 #[doc = "DMA Raw Interrupt Terminal Count Status Register"]
 pub struct RAWINTTCSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Raw Interrupt Terminal Count Status Register"]
 pub mod rawinttcstat;
 #[doc = "DMA Raw Error Interrupt Status Register"]
 pub struct RAWINTERRSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Raw Error Interrupt Status Register"]
 pub mod rawinterrstat;
 #[doc = "DMA Enabled Channel Register"]
 pub struct ENBLDCHNS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Enabled Channel Register"]
 pub mod enbldchns;
 #[doc = "DMA Software Burst Request Register"]
 pub struct SOFTBREQ {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Software Burst Request Register"]
 pub mod softbreq;
 #[doc = "DMA Software Single Request Register"]
 pub struct SOFTSREQ {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Software Single Request Register"]
 pub mod softsreq;
 #[doc = "DMA Software Last Burst Request Register"]
 pub struct SOFTLBREQ {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Software Last Burst Request Register"]
 pub mod softlbreq;
 #[doc = "DMA Software Last Single Request Register"]
 pub struct SOFTLSREQ {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Software Last Single Request Register"]
 pub mod softlsreq;
 #[doc = "DMA Configuration Register"]
 pub struct CONFIG {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Configuration Register"]
 pub mod config;
 #[doc = "DMA Synchronization Register"]
 pub struct SYNC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Synchronization Register"]
 pub mod sync;
 #[doc = "DMA Channel 0 Source Address Register"]
 pub struct SRCADDR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Channel 0 Source Address Register"]
 pub mod srcaddr;
 #[doc = "DMA Channel 0 Destination Address Register"]
 pub struct DESTADDR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Channel 0 Destination Address Register"]
 pub mod destaddr;
 #[doc = "DMA Channel 0 Linked List Item Register"]
 pub struct LLI {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Channel 0 Linked List Item Register"]
 pub mod lli;
 #[doc = "DMA Channel 0 Control Register"]
 pub struct CONTROL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Channel 0 Control Register"]
 pub mod control;
 #[doc = "DMA Channel 0 Configuration Register\\[1\\]"]
-pub struct CONFIG {
-    register: ::vcell::VolatileCell<u32>,
+pub struct CONFIG_ {
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "DMA Channel 0 Configuration Register\\[1\\]"]
-pub mod config;
+pub mod config_;

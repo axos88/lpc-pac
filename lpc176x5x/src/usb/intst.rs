@@ -1,144 +1,48 @@
-#[doc = r" Value read from the register"]
+#[doc = r"Value read from the register"]
 pub struct R {
     bits: u32,
 }
 impl super::INTST {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
+    #[doc = r"Reads the contents of the register"]
+    #[inline(always)]
     pub fn read(&self) -> R {
         R {
             bits: self.register.get(),
         }
     }
 }
-#[doc = r" Value of the field"]
-pub struct TMRR {
-    bits: bool,
-}
-impl TMRR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct REMOVE_PUR {
-    bits: bool,
-}
-impl REMOVE_PUR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HNP_FAILURER {
-    bits: bool,
-}
-impl HNP_FAILURER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HNP_SUCCESSR {
-    bits: bool,
-}
-impl HNP_SUCCESSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = r"Reader of the field"]
+pub type TMR_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type REMOVE_PU_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type HNP_FAILURE_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type HNP_SUCCESS_R = crate::FR<bool, bool>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
+    #[doc = r"Value of the register as raw bits"]
+    #[inline(always)]
     pub fn bits(&self) -> u32 {
         self.bits
     }
     #[doc = "Bit 0 - Timer time-out."]
-    #[inline]
-    pub fn tmr(&self) -> TMRR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        TMRR { bits }
+    #[inline(always)]
+    pub fn tmr(&self) -> TMR_R {
+        TMR_R::new((self.bits() & 0x01) != 0)
     }
     #[doc = "Bit 1 - Remove pull-up. This bit is set by hardware to indicate that software needs to disable the D+ pull-up resistor."]
-    #[inline]
-    pub fn remove_pu(&self) -> REMOVE_PUR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        REMOVE_PUR { bits }
+    #[inline(always)]
+    pub fn remove_pu(&self) -> REMOVE_PU_R {
+        REMOVE_PU_R::new(((self.bits() >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - HNP failed. This bit is set by hardware to indicate that the HNP switching has failed."]
-    #[inline]
-    pub fn hnp_failure(&self) -> HNP_FAILURER {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        HNP_FAILURER { bits }
+    #[inline(always)]
+    pub fn hnp_failure(&self) -> HNP_FAILURE_R {
+        HNP_FAILURE_R::new(((self.bits() >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - HNP succeeded. This bit is set by hardware to indicate that the HNP switching has succeeded."]
-    #[inline]
-    pub fn hnp_success(&self) -> HNP_SUCCESSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        HNP_SUCCESSR { bits }
+    #[inline(always)]
+    pub fn hnp_success(&self) -> HNP_SUCCESS_R {
+        HNP_SUCCESS_R::new(((self.bits() >> 3) & 0x01) != 0)
     }
 }

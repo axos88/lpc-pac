@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Interrupt Location Register"]
@@ -59,163 +59,163 @@ pub struct RegisterBlock {
 }
 #[doc = "Interrupt Location Register"]
 pub struct ILR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Location Register"]
 pub mod ilr;
 #[doc = "Clock Control Register"]
 pub struct CCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Clock Control Register"]
 pub mod ccr;
 #[doc = "Counter Increment Interrupt Register"]
 pub struct CIIR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Counter Increment Interrupt Register"]
 pub mod ciir;
 #[doc = "Alarm Mask Register"]
 pub struct AMR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm Mask Register"]
 pub mod amr;
 #[doc = "Consolidated Time Register 0"]
 pub struct CTIME0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Consolidated Time Register 0"]
 pub mod ctime0;
 #[doc = "Consolidated Time Register 1"]
 pub struct CTIME1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Consolidated Time Register 1"]
 pub mod ctime1;
 #[doc = "Consolidated Time Register 2"]
 pub struct CTIME2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Consolidated Time Register 2"]
 pub mod ctime2;
 #[doc = "Seconds Counter"]
 pub struct SEC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Seconds Counter"]
 pub mod sec;
 #[doc = "Minutes Register"]
 pub struct MIN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Minutes Register"]
 pub mod min;
 #[doc = "Hours Register"]
 pub struct HRS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Hours Register"]
 pub mod hrs;
 #[doc = "Day of Month Register"]
 pub struct DOM {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Day of Month Register"]
 pub mod dom;
 #[doc = "Day of Week Register"]
 pub struct DOW {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Day of Week Register"]
 pub mod dow;
 #[doc = "Day of Year Register"]
 pub struct DOY {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Day of Year Register"]
 pub mod doy;
 #[doc = "Months Register"]
 pub struct MONTH {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Months Register"]
 pub mod month;
 #[doc = "Years Register"]
 pub struct YEAR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Years Register"]
 pub mod year;
 #[doc = "Calibration Value Register"]
 pub struct CALIBRATION {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Calibration Value Register"]
 pub mod calibration;
 #[doc = "General Purpose Register 0"]
 pub struct GPREG {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "General Purpose Register 0"]
 pub mod gpreg;
 #[doc = "RTC Auxiliary control register"]
 pub struct RTC_AUX {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Auxiliary control register"]
 pub mod rtc_aux;
 #[doc = "RTC Auxiliary Enable register"]
 pub struct RTC_AUXEN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "RTC Auxiliary Enable register"]
 pub mod rtc_auxen;
 #[doc = "Alarm value for Seconds"]
 pub struct ASEC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Seconds"]
 pub mod asec;
 #[doc = "Alarm value for Minutes"]
 pub struct AMIN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Minutes"]
 pub mod amin;
 #[doc = "Alarm value for Hours"]
 pub struct AHRS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Hours"]
 pub mod ahrs;
 #[doc = "Alarm value for Day of Month"]
 pub struct ADOM {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Day of Month"]
 pub mod adom;
 #[doc = "Alarm value for Day of Week"]
 pub struct ADOW {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Day of Week"]
 pub mod adow;
 #[doc = "Alarm value for Day of Year"]
 pub struct ADOY {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Day of Year"]
 pub mod adoy;
 #[doc = "Alarm value for Months"]
 pub struct AMON {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Months"]
 pub mod amon;
 #[doc = "Alarm value for Year"]
 pub struct AYRS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Alarm value for Year"]
 pub mod ayrs;

@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - GPIO overall Interrupt Status."]
@@ -27,67 +27,67 @@ pub struct RegisterBlock {
 }
 #[doc = "GPIO overall Interrupt Status."]
 pub struct STATUS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO overall Interrupt Status."]
 pub mod status;
 #[doc = "GPIO Interrupt Status for Rising edge for Port 0."]
 pub struct STATR0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Status for Rising edge for Port 0."]
 pub mod statr0;
 #[doc = "GPIO Interrupt Status for Falling edge for Port 0."]
 pub struct STATF0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Status for Falling edge for Port 0."]
 pub mod statf0;
 #[doc = "GPIO Interrupt Clear."]
 pub struct CLR0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Clear."]
 pub mod clr0;
 #[doc = "GPIO Interrupt Enable for Rising edge for Port 0."]
 pub struct ENR0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Enable for Rising edge for Port 0."]
 pub mod enr0;
 #[doc = "GPIO Interrupt Enable for Falling edge for Port 0."]
 pub struct ENF0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Enable for Falling edge for Port 0."]
 pub mod enf0;
 #[doc = "GPIO Interrupt Status for Rising edge for Port 0."]
 pub struct STATR2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Status for Rising edge for Port 0."]
 pub mod statr2;
 #[doc = "GPIO Interrupt Status for Falling edge for Port 0."]
 pub struct STATF2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Status for Falling edge for Port 0."]
 pub mod statf2;
 #[doc = "GPIO Interrupt Clear."]
 pub struct CLR2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Clear."]
 pub mod clr2;
 #[doc = "GPIO Interrupt Enable for Rising edge for Port 0."]
 pub struct ENR2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Enable for Rising edge for Port 0."]
 pub mod enr2;
 #[doc = "GPIO Interrupt Enable for Falling edge for Port 0."]
 pub struct ENF2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Interrupt Enable for Falling edge for Port 0."]
 pub mod enf2;

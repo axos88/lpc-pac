@@ -1,268 +1,76 @@
-#[doc = r" Value read from the register"]
+#[doc = r"Value read from the register"]
 pub struct R {
     bits: u32,
 }
 impl super::RAWINTTCSTAT {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
+    #[doc = r"Reads the contents of the register"]
+    #[inline(always)]
     pub fn read(&self) -> R {
         R {
             bits: self.register.get(),
         }
     }
 }
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT0R {
-    bits: bool,
-}
-impl RAWINTTCSTAT0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT1R {
-    bits: bool,
-}
-impl RAWINTTCSTAT1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT2R {
-    bits: bool,
-}
-impl RAWINTTCSTAT2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT3R {
-    bits: bool,
-}
-impl RAWINTTCSTAT3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT4R {
-    bits: bool,
-}
-impl RAWINTTCSTAT4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT5R {
-    bits: bool,
-}
-impl RAWINTTCSTAT5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT6R {
-    bits: bool,
-}
-impl RAWINTTCSTAT6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RAWINTTCSTAT7R {
-    bits: bool,
-}
-impl RAWINTTCSTAT7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT0_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT1_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT2_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT3_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT4_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT5_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT6_R = crate::FR<bool, bool>;
+#[doc = r"Reader of the field"]
+pub type RAWINTTCSTAT7_R = crate::FR<bool, bool>;
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
+    #[doc = r"Value of the register as raw bits"]
+    #[inline(always)]
     pub fn bits(&self) -> u32 {
         self.bits
     }
     #[doc = "Bit 0 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat0(&self) -> RAWINTTCSTAT0R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT0R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat0(&self) -> RAWINTTCSTAT0_R {
+        RAWINTTCSTAT0_R::new((self.bits() & 0x01) != 0)
     }
     #[doc = "Bit 1 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat1(&self) -> RAWINTTCSTAT1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT1R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat1(&self) -> RAWINTTCSTAT1_R {
+        RAWINTTCSTAT1_R::new(((self.bits() >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat2(&self) -> RAWINTTCSTAT2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT2R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat2(&self) -> RAWINTTCSTAT2_R {
+        RAWINTTCSTAT2_R::new(((self.bits() >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat3(&self) -> RAWINTTCSTAT3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT3R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat3(&self) -> RAWINTTCSTAT3_R {
+        RAWINTTCSTAT3_R::new(((self.bits() >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat4(&self) -> RAWINTTCSTAT4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT4R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat4(&self) -> RAWINTTCSTAT4_R {
+        RAWINTTCSTAT4_R::new(((self.bits() >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat5(&self) -> RAWINTTCSTAT5R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT5R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat5(&self) -> RAWINTTCSTAT5_R {
+        RAWINTTCSTAT5_R::new(((self.bits() >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat6(&self) -> RAWINTTCSTAT6R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT6R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat6(&self) -> RAWINTTCSTAT6_R {
+        RAWINTTCSTAT6_R::new(((self.bits() >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 7 - Status of the terminal count interrupt for DMA channels prior to masking. Each bit represents one channel: 0 - the corresponding channel has no active terminal count interrupt request. 1 - the corresponding channel does have an active terminal count interrupt request."]
-    #[inline]
-    pub fn rawinttcstat7(&self) -> RAWINTTCSTAT7R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RAWINTTCSTAT7R { bits }
+    #[inline(always)]
+    pub fn rawinttcstat7(&self) -> RAWINTTCSTAT7_R {
+        RAWINTTCSTAT7_R::new(((self.bits() >> 7) & 0x01) != 0)
     }
 }

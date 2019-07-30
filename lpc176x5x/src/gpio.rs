@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - GPIO Port Direction control register."]
@@ -59,31 +59,31 @@ pub struct RegisterBlock {
 }
 #[doc = "GPIO Port Direction control register."]
 pub struct DIR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO Port Direction control register."]
 pub mod dir;
 #[doc = "Mask register for Port."]
 pub struct MASK {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Mask register for Port."]
 pub mod mask;
 #[doc = "Port Pin value register using FIOMASK."]
 pub struct PIN {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Port Pin value register using FIOMASK."]
 pub mod pin;
 #[doc = "Port Output Set register using FIOMASK."]
 pub struct SET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Port Output Set register using FIOMASK."]
 pub mod set;
 #[doc = "Port Output Clear register using FIOMASK."]
 pub struct CLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Port Output Clear register using FIOMASK."]
 pub mod clr;

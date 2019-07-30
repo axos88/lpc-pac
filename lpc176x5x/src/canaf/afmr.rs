@@ -1,87 +1,98 @@
-#[doc = r" Value read from the register"]
+#[doc = r"Value read from the register"]
 pub struct R {
     bits: u32,
 }
-#[doc = r" Value to write to the register"]
+#[doc = r"Value to write to the register"]
 pub struct W {
     bits: u32,
 }
 impl super::AFMR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
+    #[doc = r"Modifies the contents of the register"]
+    #[inline(always)]
     pub fn modify<F>(&self, f: F)
     where
         for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
     {
         let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
+        self.register.set(f(&R { bits }, &mut W { bits }).bits);
     }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
+    #[doc = r"Reads the contents of the register"]
+    #[inline(always)]
     pub fn read(&self) -> R {
         R {
             bits: self.register.get(),
         }
     }
-    #[doc = r" Writes to the register"]
-    #[inline]
+    #[doc = r"Writes to the register"]
+    #[inline(always)]
     pub fn write<F>(&self, f: F)
     where
         F: FnOnce(&mut W) -> &mut W,
     {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
+        self.register.set(
+            f(&mut W {
+                bits: Self::reset_value(),
+            })
+            .bits,
+        );
     }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
+    #[doc = r"Reset value of the register"]
+    #[inline(always)]
+    pub const fn reset_value() -> u32 {
+        0
+    }
+    #[doc = r"Writes the reset value to the register"]
+    #[inline(always)]
     pub fn reset(&self) {
-        self.write(|w| w)
+        self.register.set(Self::reset_value())
     }
 }
-#[doc = r" Value of the field"]
-pub struct ACCOFFR {
-    bits: bool,
+#[doc = r"Reader of the field"]
+pub type ACCOFF_R = crate::FR<bool, bool>;
+#[doc = r"Proxy"]
+pub struct _ACCOFFW<'a> {
+    w: &'a mut W,
 }
-impl ACCOFFR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
+impl<'a> _ACCOFFW<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
     }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
     }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w
     }
 }
-#[doc = r" Value of the field"]
-pub struct ACCBPR {
-    bits: bool,
+#[doc = r"Reader of the field"]
+pub type ACCBP_R = crate::FR<bool, bool>;
+#[doc = r"Proxy"]
+pub struct _ACCBPW<'a> {
+    w: &'a mut W,
 }
-impl ACCBPR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
+impl<'a> _ACCBPW<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
     }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
     }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w
     }
 }
 #[doc = "Possible values of the field `EFCAN`"]
@@ -92,92 +103,31 @@ pub enum EFCANR {
     #[doc = "The Acceptance Filter itself will take care of receiving and storing messages for selected Standard ID values on selected CAN buses. See Section 21.16 FullCAN mode on page 576."]
     THE_ACCEPTANCE_FILTE,
 }
-impl EFCANR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for EFCANR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             EFCANR::SOFTWARE_MUST_READ_A => false,
             EFCANR::THE_ACCEPTANCE_FILTE => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> EFCANR {
-        match value {
-            false => EFCANR::SOFTWARE_MUST_READ_A,
-            true => EFCANR::THE_ACCEPTANCE_FILTE,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type EFCAN_R = crate::FR<bool, EFCANR>;
+impl EFCAN_R {
     #[doc = "Checks if the value of the field is `SOFTWARE_MUST_READ_A`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_software_must_read_a(&self) -> bool {
         *self == EFCANR::SOFTWARE_MUST_READ_A
     }
     #[doc = "Checks if the value of the field is `THE_ACCEPTANCE_FILTE`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_the_acceptance_filte(&self) -> bool {
         *self == EFCANR::THE_ACCEPTANCE_FILTE
     }
 }
-#[doc = r" Proxy"]
-pub struct _ACCOFFW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _ACCOFFW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _ACCBPW<'a> {
-    w: &'a mut W,
-}
-impl<'a> _ACCBPW<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
 #[doc = "Values that can be written to the field `EFCAN`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum EFCANW {
     #[doc = "Software must read all messages for all enabled IDs on all enabled CAN buses, from the receiving CAN controllers."]
     SOFTWARE_MUST_READ_A,
@@ -187,7 +137,7 @@ pub enum EFCANW {
 impl EFCANW {
     #[allow(missing_docs)]
     #[doc(hidden)]
-    #[inline]
+    #[inline(always)]
     pub fn _bits(&self) -> bool {
         match *self {
             EFCANW::SOFTWARE_MUST_READ_A => false,
@@ -195,106 +145,86 @@ impl EFCANW {
         }
     }
 }
-#[doc = r" Proxy"]
+#[doc = r"Proxy"]
 pub struct _EFCANW<'a> {
     w: &'a mut W,
 }
 impl<'a> _EFCANW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
     pub fn variant(self, variant: EFCANW) -> &'a mut W {
         {
             self.bit(variant._bits())
         }
     }
     #[doc = "Software must read all messages for all enabled IDs on all enabled CAN buses, from the receiving CAN controllers."]
-    #[inline]
+    #[inline(always)]
     pub fn software_must_read_a(self) -> &'a mut W {
         self.variant(EFCANW::SOFTWARE_MUST_READ_A)
     }
     #[doc = "The Acceptance Filter itself will take care of receiving and storing messages for selected Standard ID values on selected CAN buses. See Section 21.16 FullCAN mode on page 576."]
-    #[inline]
+    #[inline(always)]
     pub fn the_acceptance_filte(self) -> &'a mut W {
         self.variant(EFCANW::THE_ACCEPTANCE_FILTE)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
+    #[doc = r"Value of the register as raw bits"]
+    #[inline(always)]
     pub fn bits(&self) -> u32 {
         self.bits
     }
     #[doc = "Bit 0 - if AccBP is 0, the Acceptance Filter is not operational. All Rx messages on all CAN buses are ignored."]
-    #[inline]
-    pub fn accoff(&self) -> ACCOFFR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ACCOFFR { bits }
+    #[inline(always)]
+    pub fn accoff(&self) -> ACCOFF_R {
+        ACCOFF_R::new((self.bits() & 0x01) != 0)
     }
     #[doc = "Bit 1 - All Rx messages are accepted on enabled CAN controllers. Software must set this bit before modifying the contents of any of the registers described below, and before modifying the contents of Lookup Table RAM in any way other than setting or clearing Disable bits in Standard Identifier entries. When both this bit and AccOff are 0, the Acceptance filter operates to screen received CAN Identifiers."]
-    #[inline]
-    pub fn accbp(&self) -> ACCBPR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        ACCBPR { bits }
+    #[inline(always)]
+    pub fn accbp(&self) -> ACCBP_R {
+        ACCBP_R::new(((self.bits() >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - FullCAN mode"]
-    #[inline]
-    pub fn efcan(&self) -> EFCANR {
-        EFCANR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn efcan(&self) -> EFCAN_R {
+        EFCAN_R::new(((self.bits() >> 2) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
+    #[doc = r"Writes raw bits to the register"]
+    #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
     }
     #[doc = "Bit 0 - if AccBP is 0, the Acceptance Filter is not operational. All Rx messages on all CAN buses are ignored."]
-    #[inline]
+    #[inline(always)]
     pub fn accoff(&mut self) -> _ACCOFFW {
         _ACCOFFW { w: self }
     }
     #[doc = "Bit 1 - All Rx messages are accepted on enabled CAN controllers. Software must set this bit before modifying the contents of any of the registers described below, and before modifying the contents of Lookup Table RAM in any way other than setting or clearing Disable bits in Standard Identifier entries. When both this bit and AccOff are 0, the Acceptance filter operates to screen received CAN Identifiers."]
-    #[inline]
+    #[inline(always)]
     pub fn accbp(&mut self) -> _ACCBPW {
         _ACCBPW { w: self }
     }
     #[doc = "Bit 2 - FullCAN mode"]
-    #[inline]
+    #[inline(always)]
     pub fn efcan(&mut self) -> _EFCANW {
         _EFCANW { w: self }
     }

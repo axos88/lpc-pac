@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Interrupt Register. The IR can be written to clear interrupts, or read to identify which PWM interrupt sources are pending."]
@@ -14,7 +14,7 @@ pub struct RegisterBlock {
     #[doc = "0x14 - Match Control Register. The MCR is used to control whether an interrupt is generated and if the PWM counter is reset when a Match occurs."]
     pub mcr: MCR,
     #[doc = "0x18 - Match Register. Match registers are continuously compared to the PWM counter in order to control PWM output edges."]
-    pub mr: [MR; 4],
+    pub mr_: [MR_; 4],
     #[doc = "0x28 - Capture Control Register. The CCR controls which edges of the capture inputs are used to load the Capture Registers and whether or not an interrupt is generated for a capture event."]
     pub ccr: CCR,
     #[doc = "0x2c - PWM Control Register. Enables PWM outputs and selects either single edge or double edge controlled PWM outputs."]
@@ -36,79 +36,79 @@ pub struct RegisterBlock {
 }
 #[doc = "Interrupt Register. The IR can be written to clear interrupts, or read to identify which PWM interrupt sources are pending."]
 pub struct IR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt Register. The IR can be written to clear interrupts, or read to identify which PWM interrupt sources are pending."]
 pub mod ir;
 #[doc = "Timer Control Register. The TCR is used to control the Timer Counter functions."]
 pub struct TCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Timer Control Register. The TCR is used to control the Timer Counter functions."]
 pub mod tcr;
 #[doc = "Timer Counter. The 32 bit TC is incremented every PR+1 cycles of PCLK. The TC is controlled through the TCR."]
 pub struct TC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Timer Counter. The 32 bit TC is incremented every PR+1 cycles of PCLK. The TC is controlled through the TCR."]
 pub mod tc;
 #[doc = "Prescale Register. Determines how often the PWM counter is incremented."]
 pub struct PR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Prescale Register. Determines how often the PWM counter is incremented."]
 pub mod pr;
 #[doc = "Prescale Counter. Prescaler for the main PWM counter."]
 pub struct PC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Prescale Counter. Prescaler for the main PWM counter."]
 pub mod pc;
 #[doc = "Match Control Register. The MCR is used to control whether an interrupt is generated and if the PWM counter is reset when a Match occurs."]
 pub struct MCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Match Control Register. The MCR is used to control whether an interrupt is generated and if the PWM counter is reset when a Match occurs."]
 pub mod mcr;
 #[doc = "Match Register. Match registers are continuously compared to the PWM counter in order to control PWM output edges."]
-pub struct MR {
-    register: ::vcell::VolatileCell<u32>,
+pub struct MR_ {
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Match Register. Match registers are continuously compared to the PWM counter in order to control PWM output edges."]
-pub mod mr;
+pub mod mr_;
 #[doc = "Capture Control Register. The CCR controls which edges of the capture inputs are used to load the Capture Registers and whether or not an interrupt is generated for a capture event."]
 pub struct CCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Capture Control Register. The CCR controls which edges of the capture inputs are used to load the Capture Registers and whether or not an interrupt is generated for a capture event."]
 pub mod ccr;
 #[doc = "PWM Control Register. Enables PWM outputs and selects either single edge or double edge controlled PWM outputs."]
 pub struct CR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "PWM Control Register. Enables PWM outputs and selects either single edge or double edge controlled PWM outputs."]
 pub mod cr;
 #[doc = "Match Register. Match registers are continuously compared to the PWM counter in order to control PWM output edges."]
 pub struct MR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Match Register. Match registers are continuously compared to the PWM counter in order to control PWM output edges."]
 pub mod mr;
 #[doc = "PWM Control Register. Enables PWM outputs and selects either single edge or double edge controlled PWM outputs."]
 pub struct PCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "PWM Control Register. Enables PWM outputs and selects either single edge or double edge controlled PWM outputs."]
 pub mod pcr;
 #[doc = "Load Enable Register. Enables use of updated PWM match values."]
 pub struct LER {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Load Enable Register. Enables use of updated PWM match values."]
 pub mod ler;
 #[doc = "Count Control Register. The CTCR selects between Timer and Counter mode, and in Counter mode selects the signal and edge(s) for counting."]
 pub struct CTCR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Count Control Register. The CTCR selects between Timer and Counter mode, and in Counter mode selects the signal and edge(s) for counting."]
 pub mod ctcr;

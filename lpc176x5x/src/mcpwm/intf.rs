@@ -1,10 +1,10 @@
-#[doc = r" Value read from the register"]
+#[doc = r"Value read from the register"]
 pub struct R {
     bits: u32,
 }
 impl super::INTF {
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
+    #[doc = r"Reads the contents of the register"]
+    #[inline(always)]
     pub fn read(&self) -> R {
         R {
             bits: self.register.get(),
@@ -19,41 +19,25 @@ pub enum ILIM0_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ILIM0_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ILIM0_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ILIM0_FR::THIS_INTERRUPT_SOURC => false,
             ILIM0_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ILIM0_FR {
-        match value {
-            false => ILIM0_FR::THIS_INTERRUPT_SOURC,
-            true => ILIM0_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ILIM0_F_R = crate::FR<bool, ILIM0_FR>;
+impl ILIM0_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ILIM0_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ILIM0_FR::IF_THE_CORRESPONDING
     }
@@ -66,41 +50,25 @@ pub enum IMAT0_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl IMAT0_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for IMAT0_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             IMAT0_FR::THIS_INTERRUPT_SOURC => false,
             IMAT0_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> IMAT0_FR {
-        match value {
-            false => IMAT0_FR::THIS_INTERRUPT_SOURC,
-            true => IMAT0_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type IMAT0_F_R = crate::FR<bool, IMAT0_FR>;
+impl IMAT0_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == IMAT0_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == IMAT0_FR::IF_THE_CORRESPONDING
     }
@@ -113,41 +81,25 @@ pub enum ICAP0_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ICAP0_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ICAP0_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ICAP0_FR::THIS_INTERRUPT_SOURC => false,
             ICAP0_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ICAP0_FR {
-        match value {
-            false => ICAP0_FR::THIS_INTERRUPT_SOURC,
-            true => ICAP0_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ICAP0_F_R = crate::FR<bool, ICAP0_FR>;
+impl ICAP0_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ICAP0_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ICAP0_FR::IF_THE_CORRESPONDING
     }
@@ -160,41 +112,25 @@ pub enum ILIM1_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ILIM1_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ILIM1_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ILIM1_FR::THIS_INTERRUPT_SOURC => false,
             ILIM1_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ILIM1_FR {
-        match value {
-            false => ILIM1_FR::THIS_INTERRUPT_SOURC,
-            true => ILIM1_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ILIM1_F_R = crate::FR<bool, ILIM1_FR>;
+impl ILIM1_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ILIM1_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ILIM1_FR::IF_THE_CORRESPONDING
     }
@@ -207,41 +143,25 @@ pub enum IMAT1_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl IMAT1_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for IMAT1_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             IMAT1_FR::THIS_INTERRUPT_SOURC => false,
             IMAT1_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> IMAT1_FR {
-        match value {
-            false => IMAT1_FR::THIS_INTERRUPT_SOURC,
-            true => IMAT1_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type IMAT1_F_R = crate::FR<bool, IMAT1_FR>;
+impl IMAT1_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == IMAT1_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == IMAT1_FR::IF_THE_CORRESPONDING
     }
@@ -254,41 +174,25 @@ pub enum ICAP1_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ICAP1_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ICAP1_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ICAP1_FR::THIS_INTERRUPT_SOURC => false,
             ICAP1_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ICAP1_FR {
-        match value {
-            false => ICAP1_FR::THIS_INTERRUPT_SOURC,
-            true => ICAP1_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ICAP1_F_R = crate::FR<bool, ICAP1_FR>;
+impl ICAP1_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ICAP1_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ICAP1_FR::IF_THE_CORRESPONDING
     }
@@ -301,41 +205,25 @@ pub enum ILIM2_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ILIM2_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ILIM2_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ILIM2_FR::THIS_INTERRUPT_SOURC => false,
             ILIM2_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ILIM2_FR {
-        match value {
-            false => ILIM2_FR::THIS_INTERRUPT_SOURC,
-            true => ILIM2_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ILIM2_F_R = crate::FR<bool, ILIM2_FR>;
+impl ILIM2_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ILIM2_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ILIM2_FR::IF_THE_CORRESPONDING
     }
@@ -348,41 +236,25 @@ pub enum IMAT2_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl IMAT2_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for IMAT2_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             IMAT2_FR::THIS_INTERRUPT_SOURC => false,
             IMAT2_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> IMAT2_FR {
-        match value {
-            false => IMAT2_FR::THIS_INTERRUPT_SOURC,
-            true => IMAT2_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type IMAT2_F_R = crate::FR<bool, IMAT2_FR>;
+impl IMAT2_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == IMAT2_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == IMAT2_FR::IF_THE_CORRESPONDING
     }
@@ -395,41 +267,25 @@ pub enum ICAP2_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ICAP2_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ICAP2_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ICAP2_FR::THIS_INTERRUPT_SOURC => false,
             ICAP2_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ICAP2_FR {
-        match value {
-            false => ICAP2_FR::THIS_INTERRUPT_SOURC,
-            true => ICAP2_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ICAP2_F_R = crate::FR<bool, ICAP2_FR>;
+impl ICAP2_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ICAP2_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ICAP2_FR::IF_THE_CORRESPONDING
     }
@@ -442,139 +298,83 @@ pub enum ABORT_FR {
     #[doc = "If the corresponding bit in INTEN is 1, the MCPWM module is asserting its interrupt request to the Interrupt Controller."]
     IF_THE_CORRESPONDING,
 }
-impl ABORT_FR {
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
+impl crate::ToBits<bool> for ABORT_FR {
+    #[inline(always)]
+    fn _bits(&self) -> bool {
         match *self {
             ABORT_FR::THIS_INTERRUPT_SOURC => false,
             ABORT_FR::IF_THE_CORRESPONDING => true,
         }
     }
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _from(value: bool) -> ABORT_FR {
-        match value {
-            false => ABORT_FR::THIS_INTERRUPT_SOURC,
-            true => ABORT_FR::IF_THE_CORRESPONDING,
-        }
-    }
+}
+#[doc = r"Reader of the field"]
+pub type ABORT_F_R = crate::FR<bool, ABORT_FR>;
+impl ABORT_F_R {
     #[doc = "Checks if the value of the field is `THIS_INTERRUPT_SOURC`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_this_interrupt_sourc(&self) -> bool {
         *self == ABORT_FR::THIS_INTERRUPT_SOURC
     }
     #[doc = "Checks if the value of the field is `IF_THE_CORRESPONDING`"]
-    #[inline]
+    #[inline(always)]
     pub fn is_if_the_corresponding(&self) -> bool {
         *self == ABORT_FR::IF_THE_CORRESPONDING
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
+    #[doc = r"Value of the register as raw bits"]
+    #[inline(always)]
     pub fn bits(&self) -> u32 {
         self.bits
     }
     #[doc = "Bit 0 - Limit interrupt flag for channel 0."]
-    #[inline]
-    pub fn ilim0_f(&self) -> ILIM0_FR {
-        ILIM0_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ilim0_f(&self) -> ILIM0_F_R {
+        ILIM0_F_R::new((self.bits() & 0x01) != 0)
     }
     #[doc = "Bit 1 - Match interrupt flag for channel 0."]
-    #[inline]
-    pub fn imat0_f(&self) -> IMAT0_FR {
-        IMAT0_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn imat0_f(&self) -> IMAT0_F_R {
+        IMAT0_F_R::new(((self.bits() >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - Capture interrupt flag for channel 0."]
-    #[inline]
-    pub fn icap0_f(&self) -> ICAP0_FR {
-        ICAP0_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn icap0_f(&self) -> ICAP0_F_R {
+        ICAP0_F_R::new(((self.bits() >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 4 - Limit interrupt flag for channel 1."]
-    #[inline]
-    pub fn ilim1_f(&self) -> ILIM1_FR {
-        ILIM1_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ilim1_f(&self) -> ILIM1_F_R {
+        ILIM1_F_R::new(((self.bits() >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - Match interrupt flag for channel 1."]
-    #[inline]
-    pub fn imat1_f(&self) -> IMAT1_FR {
-        IMAT1_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn imat1_f(&self) -> IMAT1_F_R {
+        IMAT1_F_R::new(((self.bits() >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - Capture interrupt flag for channel 1."]
-    #[inline]
-    pub fn icap1_f(&self) -> ICAP1_FR {
-        ICAP1_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn icap1_f(&self) -> ICAP1_F_R {
+        ICAP1_F_R::new(((self.bits() >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 8 - Limit interrupt flag for channel 2."]
-    #[inline]
-    pub fn ilim2_f(&self) -> ILIM2_FR {
-        ILIM2_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn ilim2_f(&self) -> ILIM2_F_R {
+        ILIM2_F_R::new(((self.bits() >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - Match interrupt flag for channel 2."]
-    #[inline]
-    pub fn imat2_f(&self) -> IMAT2_FR {
-        IMAT2_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn imat2_f(&self) -> IMAT2_F_R {
+        IMAT2_F_R::new(((self.bits() >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - Capture interrupt flag for channel 2."]
-    #[inline]
-    pub fn icap2_f(&self) -> ICAP2_FR {
-        ICAP2_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn icap2_f(&self) -> ICAP2_F_R {
+        ICAP2_F_R::new(((self.bits() >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 15 - Fast abort interrupt flag."]
-    #[inline]
-    pub fn abort_f(&self) -> ABORT_FR {
-        ABORT_FR::_from({
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        })
+    #[inline(always)]
+    pub fn abort_f(&self) -> ABORT_F_R {
+        ABORT_F_R::new(((self.bits() >> 15) & 0x01) != 0)
     }
 }

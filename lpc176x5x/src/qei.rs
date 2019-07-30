@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Control register"]
@@ -49,133 +49,133 @@ pub struct RegisterBlock {
 }
 #[doc = "Control register"]
 pub struct CON {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Control register"]
 pub mod con;
 #[doc = "Configuration register"]
 pub struct CONF {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Configuration register"]
 pub mod conf;
 #[doc = "Status register"]
 pub struct STAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Status register"]
 pub mod stat;
 #[doc = "Position register"]
 pub struct POS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Position register"]
 pub mod pos;
 #[doc = "Maximum position register"]
 pub struct MAXPOS {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Maximum position register"]
 pub mod maxpos;
 #[doc = "Position compare register 0"]
 pub struct CMPOS0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Position compare register 0"]
 pub mod cmpos0;
 #[doc = "Position compare register 1"]
 pub struct CMPOS1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Position compare register 1"]
 pub mod cmpos1;
 #[doc = "Position compare register 2"]
 pub struct CMPOS2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Position compare register 2"]
 pub mod cmpos2;
 #[doc = "Index count register 0"]
 pub struct INXCNT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Index count register 0"]
 pub mod inxcnt;
 #[doc = "Index compare register 0"]
 pub struct INXCMP0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Index compare register 0"]
 pub mod inxcmp0;
 #[doc = "Velocity timer reload register"]
 pub struct LOAD {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Velocity timer reload register"]
 pub mod load;
 #[doc = "Velocity timer register"]
 pub struct TIME {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Velocity timer register"]
 pub mod time;
 #[doc = "Velocity counter register"]
 pub struct VEL {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Velocity counter register"]
 pub mod vel;
 #[doc = "Velocity capture register"]
 pub struct CAP {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Velocity capture register"]
 pub mod cap;
 #[doc = "Velocity compare register"]
 pub struct VELCOMP {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Velocity compare register"]
 pub mod velcomp;
 #[doc = "Digital filter register"]
 pub struct FILTER {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Digital filter register"]
 pub mod filter;
 #[doc = "Interrupt status register"]
 pub struct INTSTAT {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt status register"]
 pub mod intstat;
 #[doc = "Interrupt status set register"]
 pub struct SET {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt status set register"]
 pub mod set;
 #[doc = "Interrupt status clear register"]
 pub struct CLR {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt status clear register"]
 pub mod clr;
 #[doc = "Interrupt enable register"]
 pub struct IE {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt enable register"]
 pub mod ie;
 #[doc = "Interrupt enable set register"]
 pub struct IES {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt enable set register"]
 pub mod ies;
 #[doc = "Interrupt enable clear register"]
 pub struct IEC {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Interrupt enable clear register"]
 pub mod iec;

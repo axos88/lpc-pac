@@ -1,4 +1,4 @@
-#[doc = r" Register block"]
+#[doc = r"Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Pin function select register 0."]
@@ -51,127 +51,127 @@ pub struct RegisterBlock {
 }
 #[doc = "Pin function select register 0."]
 pub struct PINSEL0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 0."]
 pub mod pinsel0;
 #[doc = "Pin function select register 1."]
 pub struct PINSEL1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 1."]
 pub mod pinsel1;
 #[doc = "Pin function select register 2."]
 pub struct PINSEL2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 2."]
 pub mod pinsel2;
 #[doc = "Pin function select register 3."]
 pub struct PINSEL3 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 3."]
 pub mod pinsel3;
 #[doc = "Pin function select register 4"]
 pub struct PINSEL4 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 4"]
 pub mod pinsel4;
 #[doc = "Pin function select register 7"]
 pub struct PINSEL7 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 7"]
 pub mod pinsel7;
 #[doc = "Pin function select register 9"]
 pub struct PINSEL9 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 9"]
 pub mod pinsel9;
 #[doc = "Pin function select register 10"]
 pub struct PINSEL10 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin function select register 10"]
 pub mod pinsel10;
 #[doc = "Pin mode select register 0"]
 pub struct PINMODE0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 0"]
 pub mod pinmode0;
 #[doc = "Pin mode select register 1"]
 pub struct PINMODE1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 1"]
 pub mod pinmode1;
 #[doc = "Pin mode select register 2"]
 pub struct PINMODE2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 2"]
 pub mod pinmode2;
 #[doc = "Pin mode select register 3."]
 pub struct PINMODE3 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 3."]
 pub mod pinmode3;
 #[doc = "Pin mode select register 4"]
 pub struct PINMODE4 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 4"]
 pub mod pinmode4;
 #[doc = "Pin mode select register 7"]
 pub struct PINMODE7 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 7"]
 pub mod pinmode7;
 #[doc = "Pin mode select register 9"]
 pub struct PINMODE9 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Pin mode select register 9"]
 pub mod pinmode9;
 #[doc = "Open drain mode control register 0"]
 pub struct PINMODE_OD0 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Open drain mode control register 0"]
 pub mod pinmode_od0;
 #[doc = "Open drain mode control register 1"]
 pub struct PINMODE_OD1 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Open drain mode control register 1"]
 pub mod pinmode_od1;
 #[doc = "Open drain mode control register 2"]
 pub struct PINMODE_OD2 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Open drain mode control register 2"]
 pub mod pinmode_od2;
 #[doc = "Open drain mode control register 3"]
 pub struct PINMODE_OD3 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Open drain mode control register 3"]
 pub mod pinmode_od3;
 #[doc = "Open drain mode control register 4"]
 pub struct PINMODE_OD4 {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "Open drain mode control register 4"]
 pub mod pinmode_od4;
 #[doc = "I2C Pin Configuration register"]
 pub struct I2CPADCFG {
-    register: ::vcell::VolatileCell<u32>,
+    register: vcell::VolatileCell<u32>,
 }
 #[doc = "I2C Pin Configuration register"]
 pub mod i2cpadcfg;
