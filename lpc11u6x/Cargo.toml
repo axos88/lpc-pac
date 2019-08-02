@@ -1,9 +1,10 @@
 [package]
 name = "lpc11u6x"
-version = "0.3.0"
+version = "0.1.0"
 authors = [
     "Raphael Nestler <raphael.nestler@gmail.com>",
     "Danilo Bargen <mail@dbrgn.ch>",
+    "Akos Vandra <akos@vandra.hu>"
 ]
 description = "Register mappings for the NXP LPC11Uxx family of ARM Cortex-M0+ microcontrollers"
 documentation = "https://docs.rs/lpc11uxx"
